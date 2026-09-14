@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+struct Alumno {
+    char nombre[50];
+    int edad;
+    int anio;
+};
+
+int main() {
+    struct Alumno alumno;
+
+    // Carga de datos
+    printf("Ingrese el nombre del alumno: ");
+    scanf("%s", alumno.nombre);
+
+    printf("Ingrese la edad: ");
+    scanf("%d", &alumno.edad);
+
+    printf("Ingrese el año al que pertenece: ");
+    scanf("%d", &alumno.anio);
+
+    // Mostrar datos
+    printf("\nDATOS INGRESADOS\n");
+    printf("Nombre: %s\n", alumno.nombre);
+    printf("Edad: %d\n", alumno.edad);
+    printf("Año: %d\n", alumno.anio);
+
+    // Modificar datos
+    printf("\n--- MODIFICAR DATOS ---\n");
+
+    printf("Nuevo nombre: ");
+    scanf("%s", alumno.nombre);
+
+    printf("Nueva edad: ");
+    scanf("%d", &alumno.edad);
+
+    printf("Nuevo año: ");
+    scanf("%d", &alumno.anio);
+
+    // Mostrar datos modificados
+    printf("\nDATOS MODIFICADOS\n");
+    printf("Nombre: %s\n", alumno.nombre);
+    printf("Edad: %d\n", alumno.edad);
+    printf("Año: %d\n", alumno.anio);
+
+    return 0;
+}
+   
