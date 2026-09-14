@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int vector[5];
+    int i, posicion, nuevoValor;
+
+    // Carga del vector
+    for(i = 0; i < 5; i++) {
+        printf("Ingrese el valor %d: ", i);
+        scanf("%d", &vector[i]);
+    }
+
+    // Modificación
+    printf("\nIngrese la posicion que desea modificar (0-4): ");
+    scanf("%d", &posicion);
+
+    printf("Ingrese el nuevo valor: ");
+    scanf("%d", &nuevoValor);
+
+    vector[posicion] = nuevoValor;
+
+    // Impresión del vector
+    printf("\nVector actualizado:\n");
+    for(i = 0; i < 5; i++) {
+        printf("Posicion %d: %d\n", i, vector[i]);
+    }
+
+    return 0;
+}
