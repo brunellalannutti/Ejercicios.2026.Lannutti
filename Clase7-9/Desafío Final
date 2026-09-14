@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+void ordenarMayorMenor(int vector[], int tam) {
+    int i, j, aux;
+
+    for(i = 0; i < tam - 1; i++) {
+        for(j = i + 1; j < tam; j++) {
+            if(vector[i] < vector[j]) {
+                aux = vector[i];
+                vector[i] = vector[j];
+                vector[j] = aux;
+            }
+        }
+    }
+}
+
+int sumarVector(int vector[], int tam) {
+    int suma = 0;
+    int i;
+
+    for(i = 0; i < tam; i++) {
+        suma += vector[i];
+    }
+
+    return suma;
+}
+
+int main() {
+    int vector[10];
+    int i, suma;
+    float promedio;
+
+    for(i = 0; i < 10; i++) {
+        printf("Ingrese el valor %d: ", i);
+        scanf("%d", &vector[i]);
+    }
+
+    ordenarMayorMenor(vector, 10);
+
+    printf("\nVector ordenado de mayor a menor:\n");
+    for(i = 0; i < 10; i++) {
+        printf("%d ", vector[i]);
+    }
+
+    suma = sumarVector(vector, 10);
+    promedio = (float)suma / 10;
+
+    printf("\n\nSuma de los valores: %d", suma);
+    printf("\nPromedio: %.2f\n", promedio);
+
+    return 0;
+}
