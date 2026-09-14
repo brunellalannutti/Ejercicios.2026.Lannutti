@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int vector[5];
+    int i, posicion;
+    char continuar = 'S';
+
+    for(i = 0; i < 5; i++) {
+        printf("Ingrese el valor %d: ", i);
+        scanf("%d", &vector[i]);
+    }
+
+    while(continuar == 'S' || continuar == 's') {
+
+        printf("\nIngrese la posicion que desea consultar (0-4): ");
+        scanf("%d", &posicion);
+
+        if(posicion >= 0 && posicion < 5) {
+            printf("Dato almacenado: %d\n", vector[posicion]);
+        } else {
+            printf("Posicion invalida.\n");
+        }
+
+        printf("Desea seguir consultando? (S/N): ");
+        scanf(" %c", &continuar);
+    }
+
+    printf("Programa finalizado.\n");
+
+    return 0;
+}
